@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #000000, #26422a, #1f6433);
+            height: 100vh;
+        }
+
+        .container {
+            width: 350px;
+            background-color: #121212;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #1e1e1e;
+            color: white;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border: 1px solid #1db954;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #1db954;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #17a74a;
+        }
+
+        input[type="reset"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 25px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #555;
+        }
+
+        a {
+            color: #1db954;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+
+        <form action="proses_login.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <input type="submit" value="Login">
+            <input type="reset" value="Batal">
+        </form>
+
+        <div class="footer-text">
+            Belum punya akun? <a href="registrasi.html">Daftar sekarang</a>
+        </div>
+    </div>
+
+</body>
+</html>

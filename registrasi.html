@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Registrasi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+           background: linear-gradient(135deg, #0f2027, #193b3a, #334148);
+            height: 100vh;
+        }
+
+        .container {
+            width: 380px;
+            background-color: #121212;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #1e1e1e;
+            color: white;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border: 1px solid #1db954;
+        }
+
+        .radio-group {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .radio-group input {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #1db954;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #17a74a;
+        }
+
+        input[type="reset"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 25px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #555;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        a {
+            color: #1db954;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Create Account</h2>
+
+        <form action="proses_registrasi.php" method="POST">
+
+            <input type="text" name="nama" placeholder="Nama Lengkap" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <div class="radio-group">
+                Jenis Kelamin:<br>
+                <input type="radio" name="jk" value="Laki-laki" required> Laki-laki
+                <input type="radio" name="jk" value="Perempuan"> Perempuan
+            </div>
+
+            <input type="submit" value="Daftar">
+            <input type="reset" value="Batal">
+
+        </form>
+
+        <div class="footer-text">
+            Sudah punya akun? <a href="Login.html">Login disini</a>
+        </div>
+    </div>
+
+</body>
+</html>
